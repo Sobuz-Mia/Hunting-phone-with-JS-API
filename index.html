@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hunting Phone using API</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header>
+      <h2 class="text-5xl text-center my-4">Hunder Phone</h2>
+    </header>
+    <main>
+      <section class="mb-5">
+        <!-- search button -->
+        <div class="bg-gray-100 py-4 text-center">
+          <input type="text" placeholder="Search here" id="search-field" class="input input-bordered w-full max-w-xs mb-2" />
+          <button onclick="handleSearch()" class="btn btn-active btn-accent ml-3">Search</button>
+        </div>
+        <!-- loading spinner add -->
+        <div id="loading-container" class="text-center my-40 hidden">
+          <span class="loading loading-spinner text-secondary"></span>
+        </div>
+      </section>
+      <section>
+        <!--Search result  -->
+        <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 px-3">
+          
+        </div>
+        <!-- show all button -->
+        <div id="show-all-container" class="hidden text-center my-4">
+          <button class="btn btn-active btn-success">Show All</button>
+        </div>
+      </section>
+            <!-- Open the modal using ID.showModal() method -->
+      
+      <dialog id="my_modal" class="modal">
+        <form method="dialog" class="modal-box">
+          <h3 id="title" class="font-bold text-lg"></h3>
+          <div id="modal-container">
+
+          </div>
+          <div class="modal-action">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn">Close</button>
+          </div>
+        </form>
+      </dialog>
+    </main>
+    <footer></footer>
+    <script src="phone.js"></script>
+  </body>
+</html>
